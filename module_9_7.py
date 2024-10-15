@@ -1,6 +1,6 @@
 def is_prime(func):
-    def wrapper(a, b, c):
-        num = func(a, b, c)
+    def wrapper(*args):
+        num = func(*args)
         div = 0
         for i in range(2, num):
             if num % i == 0:
