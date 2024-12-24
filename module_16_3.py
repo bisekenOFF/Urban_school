@@ -29,6 +29,6 @@ def update_user(user_id: int = Path(ge=1, le=100, description='Идентифи�
 
 
 @app.delete('/user/{user_id}')
-def delete_user(user_id: str) -> str:
-    users.pop(user_id)
+def delete_user(user_id: int) -> str:
+    users.pop(str(user_id))
     return f"User {user_id} is deleted"
